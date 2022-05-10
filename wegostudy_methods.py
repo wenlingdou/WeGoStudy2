@@ -67,11 +67,13 @@ def log_in():
 
 def log_out():
 
-    driver.find_element(By.XPATH, '//img[@alt="Partner"]').click()
-    sleep(1)
-    driver.find_element(By.XPATH, '//a[normalize-space()="Log out"]').click()
-    sleep(1)
-    print(f'********* LOG OUT IS SUCCUSSEFUL  {datetime.datetime.now()}********************')
+        driver.find_element(By.CSS_SELECTOR, 'span[class="my-auto mr-2 pf-name"]').click()
+        sleep(1)
+        driver.find_element(By.XPATH, '//a[normalize-space()="Log out"]').click()
+        sleep(1)
+        driver.find_element(By.ID, 'authentication-popup').is_displayed()
+        sleep(1)
+        print(f'********* LOG OUT IS SUCCUSSEFUL  {datetime.datetime.now()}********************')
 
 
 # def create_new_student():
