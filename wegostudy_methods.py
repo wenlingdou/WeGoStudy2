@@ -61,7 +61,7 @@ def log_in():
         driver.find_element(By.ID, 'user_password').send_keys(locators.admin_password)
         sleep(1)
         driver.find_element(By.XPATH, '//input[@name="commit"]').click()
-        sleep(8)
+        sleep(6)
 
 
 
